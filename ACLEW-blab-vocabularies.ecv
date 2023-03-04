@@ -1,0 +1,18 @@
+<CV_RESOURCE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AUTHOR="Bergelson Lab" DATE="2023-03-01T21:23:24+00:00" VERSION="1.0" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00130975-001" LANG_ID="und" LANG_LABEL="undetermined (und)" />
+    <CONTROLLED_VOCABULARY CV_ID="pi_cv">
+        <DESCRIPTION LANG_REF="und">has PI</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid_45528005-6a72-4cc7-a887-d19681926eea">
+            <CVE_VALUE LANG_REF="und" DESCRIPTION="has PI">PI</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="is_silent_cv">
+        <DESCRIPTION LANG_REF="und">whether there is speech in the coding segment at all</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid_619c64e4-c17c-4635-b626-319ef71e0fe6">
+            <CVE_VALUE LANG_REF="und" DESCRIPTION="contains no speech">Y</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_b6e00244-2327-4aed-8c42-bd41bb660691">
+            <CVE_VALUE LANG_REF="und" DESCRIPTION="contains no speech">N</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+</CV_RESOURCE>
