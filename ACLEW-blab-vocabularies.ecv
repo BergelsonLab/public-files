@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><CV_RESOURCE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AUTHOR="Bergelson Lab" DATE="2023-03-09T17:27:22+00:00" VERSION="1.0" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
-    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00130975-001" LANG_ID="und" LANG_LABEL="undetermined (und)"/>
-    <CONTROLLED_VOCABULARY CV_ID="PI">
-        <DESCRIPTION LANG_REF="und">has PI</DESCRIPTION>
-        <CV_ENTRY_ML CVE_ID="cveid_45528005-6a72-4cc7-a887-d19681926eea">
-            <CVE_VALUE DESCRIPTION="has PI" LANG_REF="und">PI</CVE_VALUE>
+<CV_RESOURCE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AUTHOR="Bergelson Lab" DATE="2023-03-10T21:25:05+00:00" VERSION="1.0" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00130975-001" LANG_ID="und" LANG_LABEL="undetermined (und)"></LANGUAGE>
+    <CONTROLLED_VOCABULARY CV_ID="present">
+        <DESCRIPTION LANG_REF="und">generalized flag</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid0">
+            <CVE_VALUE DESCRIPTION="Present" LANG_REF="und">P</CVE_VALUE>
         </CV_ENTRY_ML>
     </CONTROLLED_VOCABULARY>
     <CONTROLLED_VOCABULARY CV_ID="is_silent">
@@ -15,7 +15,13 @@
             <CVE_VALUE DESCRIPTION="contains no speech" LANG_REF="und">N</CVE_VALUE>
         </CV_ENTRY_ML>
     </CONTROLLED_VOCABULARY>
-<CONTROLLED_VOCABULARY CV_ID="xds">
+<CONTROLLED_VOCABULARY CV_ID="PI">
+        <DESCRIPTION LANG_REF="und">has PI</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid_45528005-6a72-4cc7-a887-d19681926eea">
+            <CVE_VALUE DESCRIPTION="has PI" LANG_REF="und">PI</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="xds">
         <DESCRIPTION LANG_REF="und">Classifications for the addressee of non-target-child speech: Is the speech directed to a child, an adult, or both?</DESCRIPTION>
         <CV_ENTRY_ML CVE_ID="cveid0">
             <CVE_VALUE DESCRIPTION="Target child addressee" LANG_REF="und">T</CVE_VALUE>
