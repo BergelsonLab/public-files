@@ -15,7 +15,7 @@
             <CVE_VALUE DESCRIPTION="contains no speech" LANG_REF="und">N</CVE_VALUE>
         </CV_ENTRY_ML>
     </CONTROLLED_VOCABULARY>
-<CONTROLLED_VOCABULARY CV_ID="PI">
+    <CONTROLLED_VOCABULARY CV_ID="PI">
         <DESCRIPTION LANG_REF="und">has PI</DESCRIPTION>
         <CV_ENTRY_ML CVE_ID="cveid_45528005-6a72-4cc7-a887-d19681926eea">
             <CVE_VALUE DESCRIPTION="has PI" LANG_REF="und">PI</CVE_VALUE>
@@ -45,4 +45,58 @@
             <CVE_VALUE DESCRIPTION="Unsure" LANG_REF="und">U</CVE_VALUE>
         </CV_ENTRY_ML>
     </CONTROLLED_VOCABULARY>
-    </CV_RESOURCE>
+    <CONTROLLED_VOCABULARY CV_ID="utt">
+        <CV_ENTRY_ML CVE_ID="cveid_utt_D">
+            <CVE_VALUE DESCRIPTION="Declarative" LANG_REF="und">D</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_utt_I">
+            <CVE_VALUE DESCRIPTION="Imperative" LANG_REF="und">I</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_utt_N">
+            <CVE_VALUE DESCRIPTION="Indirect imperative" LANG_REF="und">N</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_utt_Q">
+            <CVE_VALUE DESCRIPTION="Interrogative" LANG_REF="und">Q</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <DESCRIPTION LANG_REF="und">Vocabulary containing syntactic utterance type for Input Quality project.</DESCRIPTION>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="inq">
+        <CV_ENTRY_ML CVE_ID="cveid_inq_A">
+            <CVE_VALUE DESCRIPTION="Affirmations" LANG_REF="und">A</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_B">
+            <CVE_VALUE DESCRIPTION="Reading" LANG_REF="und">B</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_E">
+            <CVE_VALUE DESCRIPTION="Expansions" LANG_REF="und">E</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_EA">
+            <CVE_VALUE DESCRIPTION="Expansions and Affirmations" LANG_REF="und">EA</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_ER">
+            <CVE_VALUE DESCRIPTION="Expansions and Repetitions" LANG_REF="und">ER</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_EX">
+            <CVE_VALUE DESCRIPTION="Expansions and Extensions" LANG_REF="und">EX</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_O">
+            <CVE_VALUE DESCRIPTION="Other" LANG_REF="und">O</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_R">
+            <CVE_VALUE DESCRIPTION="Repetitions" LANG_REF="und">R</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_RA">
+            <CVE_VALUE DESCRIPTION="Repetitions and Affirmations" LANG_REF="und">RA</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_X">
+            <CVE_VALUE DESCRIPTION="Extensions" LANG_REF="und">X</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_XA">
+            <CVE_VALUE DESCRIPTION="Extensions and Affirmations" LANG_REF="und">XA</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_XR">
+            <CVE_VALUE DESCRIPTION="Extensions and Repetitions" LANG_REF="und">XR</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <DESCRIPTION LANG_REF="und">Vocabulary for coding content of conversational turns by quality</DESCRIPTION>
+    </CONTROLLED_VOCABULARY>
+</CV_RESOURCE>
