@@ -1,4 +1,4 @@
-<CV_RESOURCE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AUTHOR="Bergelson Lab" DATE="2023-03-10T21:25:05+00:00" VERSION="1.0" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+<CV_RESOURCE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AUTHOR="Bergelson Lab" DATE="2023-03-22T18:33:14+00:00" VERSION="1.0" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
     <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00130975-001" LANG_ID="und" LANG_LABEL="undetermined (und)"></LANGUAGE>
     <CONTROLLED_VOCABULARY CV_ID="present">
         <DESCRIPTION LANG_REF="und">generalized flag</DESCRIPTION>
@@ -58,6 +58,9 @@
         <CV_ENTRY_ML CVE_ID="cveid_utt_Q">
             <CVE_VALUE DESCRIPTION="Interrogative" LANG_REF="und">Q</CVE_VALUE>
         </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_utt_U">
+            <CVE_VALUE DESCRIPTION="Uncertain or Irrelevant" LANG_REF="und">U</CVE_VALUE>
+        </CV_ENTRY_ML>
         <DESCRIPTION LANG_REF="und">Vocabulary containing syntactic utterance type for Input Quality project.</DESCRIPTION>
     </CONTROLLED_VOCABULARY>
     <CONTROLLED_VOCABULARY CV_ID="inq">
@@ -96,6 +99,9 @@
         </CV_ENTRY_ML>
         <CV_ENTRY_ML CVE_ID="cveid_inq_XR">
             <CVE_VALUE DESCRIPTION="Extensions and Repetitions" LANG_REF="und">XR</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_N">
+            <CVE_VALUE DESCRIPTION="Negation" LANG_REF="und">N</CVE_VALUE>
         </CV_ENTRY_ML>
         <DESCRIPTION LANG_REF="und">Vocabulary for coding content of conversational turns by quality</DESCRIPTION>
     </CONTROLLED_VOCABULARY>
