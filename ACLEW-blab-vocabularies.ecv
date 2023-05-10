@@ -79,6 +79,9 @@
         <CV_ENTRY_ML CVE_ID="cveid_inq_N">
             <CVE_VALUE DESCRIPTION="Negation" LANG_REF="und">N</CVE_VALUE>
         </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_inq_I">
+            <CVE_VALUE DESCRIPTION="Initiation" LANG_REF="und">I</CVE_VALUE>
+        </CV_ENTRY_ML>
         <DESCRIPTION LANG_REF="und">Vocabulary for coding content of conversational turns by quality</DESCRIPTION>
     </CONTROLLED_VOCABULARY>
     <CONTROLLED_VOCABULARY CV_ID="cds">
