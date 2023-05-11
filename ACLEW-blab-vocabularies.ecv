@@ -99,4 +99,16 @@
         </CV_ENTRY_ML>
         <DESCRIPTION LANG_REF="und">Sub-classifications for child-directed speech (xds = C).</DESCRIPTION>
     </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="con">
+        <CV_ENTRY_ML CVE_ID="cveid_con_S">
+            <CVE_VALUE DESCRIPTION="Self: person talking to themselves, extending on their own first statement" LANG_REF="und">S</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_con_D">
+            <CVE_VALUE DESCRIPTION="Dyad: two people in dialogue, responding to each other" LANG_REF="und">D</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_con_G">
+            <CVE_VALUE DESCRIPTION="Group: several people all talking to each other at the same time" LANG_REF="und">G</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <DESCRIPTION LANG_REF="und">Conversational context - the tier that tells us how many people are talking.</DESCRIPTION>
+    </CONTROLLED_VOCABULARY>
 </CV_RESOURCE>
