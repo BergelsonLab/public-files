@@ -111,4 +111,16 @@
         </CV_ENTRY_ML>
         <DESCRIPTION LANG_REF="und">Conversational context - the tier that tells us how many people are talking.</DESCRIPTION>
     </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="dtl">
+        <CV_ENTRY_ML CVE_ID="cveid_dtl_D">
+            <CVE_VALUE DESCRIPTION="Decontextualized" LANG_REF="und">D</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_dtl_C">
+            <CVE_VALUE DESCRIPTION="Contextualized" LANG_REF="und">C</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_dtl_O">
+            <CVE_VALUE DESCRIPTION="Other." LANG_REF="und">O</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <DESCRIPTION LANG_REF="und">Vocabulary containing the use of decontextualized language for CoSHARe project.</DESCRIPTION>
+    </CONTROLLED_VOCABULARY>
 </CV_RESOURCE>
