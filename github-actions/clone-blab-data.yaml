@@ -1,0 +1,28 @@
+name: clone-blab-data
+description: Clone one of BLab's datasets to ~/BLAB_DATA.
+
+inputs:
+  repository:
+    required: true
+    type: string
+  fetch-depth:
+    required: false
+    type: number
+    default: 0
+        
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        repository_name=$(echo ${{ inputs.repository }} | cut -d'/' -f2)
+        echo "repository_name=$repository_name" >> $GITHUB_ENV
+    - uses: actions/checkout@v3
+      with:
+        repository: ${{ inputs.repository }}
+        path: BLAB_DATA/$repository_name
+        fetch-depth: ${{ inputs.fetch-depth }}
+
+    - name: Move to ~/BLAB_DATA
+      run: |
+        mkdir -p ~/BLAB_DATA
+        mv BLAB_DATA/$repository_name ~/BLAB_DATA/
