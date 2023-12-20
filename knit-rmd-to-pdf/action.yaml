@@ -1,0 +1,35 @@
+name: knit-rmd-to-pdf
+description: Knit an Rmarkdown file to pdf.
+
+inputs:
+  rmd_path:
+    required: true
+    type: string
+        
+runs:
+  using: "composite"
+  steps:
+    - uses: r-lib/actions/setup-pandoc@v2
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-renv@v2
+    - uses: r-lib/actions/setup-tinytex@v2
+    
+    - name: Render Rmarkdown files
+      shell: bash
+      run: Rscript -e "rmarkdown::render('${{ inputs.rmd_path }}')"
+    
+    - name: Manipulate path strings
+      shell: bash
+      run: |
+        # Change extension in RMD_PATH to pdf
+        PDF_PATH=${${{ inputs.rmd_path }}/.Rmd/.pdf}
+        echo "PDF_PATH=$PDF_PATH" >> $GITHUB_ENV
+        
+        # Get the stem the filename without path (manuscript/main.pdf -> main)
+        STEM=$(basename $PDF_PATH .pdf)
+        echo "STEM=$STEM" >> $GITHUB_ENV
+        
+    - uses: actions/upload-artifact@v3
+      with:
+        name: ${{ env.STEM }}
+        path: ${{ env.PDF_PATH }}
