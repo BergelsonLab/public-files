@@ -22,7 +22,8 @@ runs:
       shell: bash
       run: |
         # Change extension in RMD_PATH to pdf
-        PDF_PATH=${${{ inputs.rmd_path }}/.Rmd/.pdf}
+        RMD_PATH=${{ inputs.rmd_path }}
+        PDF_PATH=${RMD_PATH/.Rmd/.pdf}
         echo "PDF_PATH=$PDF_PATH" >> $GITHUB_ENV
         
         # Get the stem the filename without path (manuscript/main.pdf -> main)
