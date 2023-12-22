@@ -1,3 +1,6 @@
+# Workflow adapted from 
+# https://github.com/r-lib/actions/tree/v2/examples#render-rmarkdown
+
 name: knit-rmd-to-pdf
 description: Knit an Rmarkdown file to pdf.
 
