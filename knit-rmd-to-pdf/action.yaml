@@ -17,23 +17,23 @@ runs:
       shell: bash
       run: |
         # Parent folder, filename, and stem of rmd_path
-        RMD_PATH="${{ inputs.rmd-path }}"
+        RMD_PATH=${{ inputs.rmd-path }}
         RMD_NAME=$( basename $RMD_PATH )
         STEM=$(basename $RMD_PATH)
         
-        echo "RMD_PATH=\"$RMD_PATH\"" >> $GITHUB_ENV
-        echo "STEM=\"$STEM\"" >> $GITHUB_ENV
+        echo "RMD_PATH=$RMD_PATH" >> $GITHUB_ENV
+        echo "STEM=$STEM" >> $GITHUB_ENV
 
         # Create a path to the pdf by changing the extension
         PDF_PATH=${RMD_PATH/.Rmd/.pdf}
-        echo "PDF_PATH=\"$PDF_PATH\"" >> $GITHUB_ENV
+        echo "PDF_PATH=$PDF_PATH" >> $GITHUB_ENV
 
         # Folder with renv.lock and the rmd's path relative to it
         RENV_DIR="${{ inputs.renv-directory }}"
         RMD_RELATIVE_PATH="$( realpath --relative-to $RENV_DIR $RMD_PATH )"
 
-        echo "RENV_DIR=\"$RENV_DIR\"" >> $GITHUB_ENV
-        echo "RMD_RELATIVE_PATH=\"$RMD_RELATIVE_PATH\"" >> $GITHUB_ENV
+        echo "RENV_DIR=$RENV_DIR" >> $GITHUB_ENV
+        echo "RMD_RELATIVE_PATH=$RMD_RELATIVE_PATH" >> $GITHUB_ENV
 
         cat $GITHUB_ENV
 
