@@ -18,7 +18,7 @@ runs:
       run: |
         # Parent folder, filename, and stem of rmd_path
         RMD_PATH=${{ inputs.rmd-path }}
-        STEM="$(basename $RMD_PATH)"
+        STEM="$(basename $RMD_PATH .Rmd)"
         
         echo "RMD_PATH=$RMD_PATH" >> $GITHUB_ENV
         echo "STEM=$STEM" >> $GITHUB_ENV
