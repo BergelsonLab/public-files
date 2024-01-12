@@ -50,6 +50,10 @@ runs:
       run: |
         # to make sure a new pdf is created
         rm -f "$PDF_PATH"
+
+        # debug
+        pwd
+        
         # so that renv is activated
         cd $RENV_DIR
         Rscript -e "rmarkdown::render('$RMD_RELATIVE_PATH')"
