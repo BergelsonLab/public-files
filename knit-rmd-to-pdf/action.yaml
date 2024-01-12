@@ -5,7 +5,7 @@ name: knit-rmd-to-pdf
 description: Knit an Rmarkdown file to pdf.
 
 inputs:
-  rmd_path:
+  rmd-path:
     required: true
     type: string
   renv-directory:
@@ -16,29 +16,48 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Manipulate path strings
+      shell: bash
+      run: |
+        # Parent folder, filename, and stem of rmd_path
+        RMD_PATH=${{ inputs.rmd-path }}
+        STEM="$(basename $RMD_PATH .Rmd)"
+        
+        echo "RMD_PATH=$RMD_PATH" >> $GITHUB_ENV
+        echo "STEM=$STEM" >> $GITHUB_ENV
+
+        # Create a path to the pdf by changing the extension
+        PDF_PATH="${RMD_PATH/.Rmd/.pdf}"
+        echo "PDF_PATH=$PDF_PATH" >> $GITHUB_ENV
+
+        # Folder with renv.lock and the rmd's path relative to it
+        RENV_DIR=${{ inputs.renv-directory }}
+        RMD_RELATIVE_PATH=$( realpath --relative-to $RENV_DIR $RMD_PATH )
+
+        echo "RENV_DIR=$RENV_DIR" >> $GITHUB_ENV
+        echo "RMD_RELATIVE_PATH=$RMD_RELATIVE_PATH" >> $GITHUB_ENV
+
     - uses: r-lib/actions/setup-r@v2
     - uses: r-lib/actions/setup-renv@v2
-      working-directory: ${{ inputs.renv-directory }}
+      with:
+        working-directory: ${{ inputs.renv-directory }}
     
     - uses: r-lib/actions/setup-pandoc@v2
     - uses: r-lib/actions/setup-tinytex@v2
     
     - name: Render Rmarkdown files
       shell: bash
-      run: Rscript -e "rmarkdown::render('${{ inputs.rmd_path }}')"
-    
-    - name: Manipulate path strings
-      shell: bash
       run: |
-        # Change extension in RMD_PATH to pdf
-        RMD_PATH=${{ inputs.rmd_path }}
-        PDF_PATH=${RMD_PATH/.Rmd/.pdf}
-        echo "PDF_PATH=$PDF_PATH" >> $GITHUB_ENV
+        # to make sure a new pdf is created
+        rm -f "$PDF_PATH"
+
+        # debug
+        pwd
         
-        # Get the stem the filename without path (manuscript/main.pdf -> main)
-        STEM=$(basename $PDF_PATH .pdf)
-        echo "STEM=$STEM" >> $GITHUB_ENV
-        
+        # so that renv is activated
+        cd $RENV_DIR
+        Rscript -e "rmarkdown::render('$RMD_RELATIVE_PATH')"
+    
     - uses: actions/upload-artifact@v3
       with:
         name: ${{ env.STEM }}
