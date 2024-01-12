@@ -29,7 +29,7 @@ runs:
 
         # Folder with renv.lock and the rmd's path relative to it
         RENV_DIR=${{ inputs.renv-directory }}
-        RMD_RELATIVE_PATH="$( realpath --relative-to $RENV_DIR $RMD_PATH )"
+        RMD_RELATIVE_PATH=$( realpath --relative-to $RENV_DIR $RMD_PATH )
 
         echo "RENV_DIR=$RENV_DIR" >> $GITHUB_ENV
         echo "RMD_RELATIVE_PATH=\"$RMD_RELATIVE_PATH\"" >> $GITHUB_ENV
