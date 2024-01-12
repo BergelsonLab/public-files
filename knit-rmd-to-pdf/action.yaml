@@ -22,7 +22,7 @@ runs:
           # Parent folder, filename, and stem of rmd_path
           RMD_PATH="${{ inputs.rmd-path }}"
           RMD_NAME=$( basename $RMD_PATH )
-          STEM=$(basename $PDF_PATH)
+          STEM=$(basename $RMD_PATH)
           
           echo "RMD_PATH=\"$RMD_PATH\"" >> $GITHUB_ENV
           echo "STEM=\"$STEM\"" >> $GITHUB_ENV
@@ -40,7 +40,7 @@ runs:
           
     - uses: r-lib/actions/setup-r@v2
     - uses: r-lib/actions/setup-renv@v2
-      working-directory: "${{ env.RENV_DIR}}"
+      working-directory: "${{ env.RENV_DIR }}"
     
     - uses: r-lib/actions/setup-pandoc@v2
     - uses: r-lib/actions/setup-tinytex@v2
@@ -49,10 +49,10 @@ runs:
       shell: bash
       run: |
         # to make sure a new pdf is created
-        rm $PDF_PATH
+        rm -f "$PDF_PATH"
         # so that renv is activated
         cd $RENV_DIR
-        Rscript -e "rmarkdown::render($RMD_RELATIVE_PATH')"
+        Rscript -e "rmarkdown::render('$RMD_RELATIVE_PATH')"
     
     - uses: actions/upload-artifact@v3
       with:
