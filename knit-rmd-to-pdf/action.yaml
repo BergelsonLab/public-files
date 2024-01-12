@@ -37,7 +37,8 @@ runs:
 
     - uses: r-lib/actions/setup-r@v2
     - uses: r-lib/actions/setup-renv@v2
-      working-directory: "${{ env.RENV_DIR }}"
+      with:
+        working-directory: "${{ env.RENV_DIR }}"
     
     - uses: r-lib/actions/setup-pandoc@v2
     - uses: r-lib/actions/setup-tinytex@v2
