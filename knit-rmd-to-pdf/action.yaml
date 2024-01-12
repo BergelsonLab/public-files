@@ -5,13 +5,9 @@ name: knit-rmd-to-pdf
 description: Knit an Rmarkdown file to pdf.
 
 inputs:
-  rmd-name:
+  rmd-path:
     required: true
     type: string
-  rmd-directory:
-    required: false
-    type: string
-    default: .
   renv-directory:
     required: false
     type: string
@@ -24,7 +20,7 @@ runs:
         shell: bash
         run: |
           # Parent folder, filename, and stem of rmd_path
-          RMD_PATH="${{ inputs.rmd_path }}"
+          RMD_PATH="${{ inputs.rmd-path }}"
           RMD_NAME=$( basename $RMD_PATH )
           STEM=$(basename $PDF_PATH)
           
