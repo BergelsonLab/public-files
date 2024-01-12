@@ -21,7 +21,7 @@ runs:
         RMD_NAME="$( basename $RMD_PATH .Rmd)"
         STEM="$(basename $RMD_PATH)"
         
-        echo "RMD_PATH=\"$RMD_PATH\"" >> $GITHUB_ENV
+        echo "RMD_PATH=$RMD_PATH" >> $GITHUB_ENV
         echo "STEM=\"$STEM\"" >> $GITHUB_ENV
 
         # Create a path to the pdf by changing the extension
