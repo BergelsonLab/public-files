@@ -1,0 +1,52 @@
+<CV_RESOURCE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AUTHOR="Bergelson Lab" DATE="2023-03-22T18:33:14+00:00" VERSION="1.0" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00130975-001" LANG_ID="und" LANG_LABEL="undetermined (und)"></LANGUAGE>
+
+    <CONTROLLED_VOCABULARY CV_ID="pro">
+        <DESCRIPTION LANG_REF="und">Tagging repetition proximity</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid_pro_C">
+            <CVE_VALUE DESCRIPTION="Contingent" LANG_REF="und">C</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_pro_D">
+            <CVE_VALUE DESCRIPTION="Distant" LANG_REF="und">D</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+
+    <CONTROLLED_VOCABULARY CV_ID="rep">
+        <DESCRIPTION LANG_REF="und">Tagging repetitions in child utterances</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid_rep_R">
+            <CVE_VALUE DESCRIPTION="Repetition" LANG_REF="und">R</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_rep_P">
+            <CVE_VALUE DESCRIPTION="Patrial repetition" LANG_REF="und">P</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_rep_N">
+            <CVE_VALUE DESCRIPTION="Non-repetition" LANG_REF="und">N</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+
+    <CONTROLLED_VOCABULARY CV_ID="fun">
+        <DESCRIPTION LANG_REF="und">Tagging the function of repetitions in child utterances</DESCRIPTION>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_S">
+            <CVE_VALUE DESCRIPTION="Self-repetition" LANG_REF="und">S</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_Q">
+            <CVE_VALUE DESCRIPTION="Question or request" LANG_REF="und">Q</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_R">
+            <CVE_VALUE DESCRIPTION="Routines" LANG_REF="und">R</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_D">
+            <CVE_VALUE DESCRIPTION="Description" LANG_REF="und">D</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_P">
+            <CVE_VALUE DESCRIPTION="Verbal play" LANG_REF="und">P</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_M">
+            <CVE_VALUE DESCRIPTION="Media" LANG_REF="und">M</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fun_W">
+            <CVE_VALUE DESCRIPTION="Whining" LANG_REF="und">W</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+
+</CV_RESOURCE>
