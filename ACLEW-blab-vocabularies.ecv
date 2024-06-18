@@ -88,11 +88,11 @@
         <CV_ENTRY_ML CVE_ID="cveid_cds_T">
             <CVE_VALUE DESCRIPTION="Target child only" LANG_REF="und">T</CVE_VALUE>
         </CV_ENTRY_ML>
-        <CV_ENTRY_ML CVE_ID="cveid_cds_U">
-            <CVE_VALUE DESCRIPTION="Unsure" LANG_REF="und">U</CVE_VALUE>
+        <CV_ENTRY_ML CVE_ID="cveid_cds_X">
+            <CVE_VALUE DESCRIPTION="Unclear" LANG_REF="und">X</CVE_VALUE>
         </CV_ENTRY_ML>
-        <CV_ENTRY_ML CVE_ID="cveid_cds_B">
-            <CVE_VALUE DESCRIPTION="Both target and another child" LANG_REF="und">B</CVE_VALUE>
+        <CV_ENTRY_ML CVE_ID="cveid_cds_M">
+            <CVE_VALUE DESCRIPTION="Both target and another child" LANG_REF="und">M</CVE_VALUE>
         </CV_ENTRY_ML>
         <CV_ENTRY_ML CVE_ID="cveid_cds_K">
             <CVE_VALUE DESCRIPTION="Only a non-target child being addressed" LANG_REF="und">K</CVE_VALUE>
