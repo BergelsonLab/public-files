@@ -58,7 +58,7 @@ runs:
         cd $RENV_DIR
         Rscript -e "rmarkdown::render('$RMD_RELATIVE_PATH')"
     
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: ${{ env.STEM }}
         path: ${{ env.PDF_PATH }}
